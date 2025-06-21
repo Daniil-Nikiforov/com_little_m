@@ -2,8 +2,16 @@ import React from "react";
 import "./Link.css";
 
 function Link() {
+  function animationTimer() {
+    setInterval(() => {
+      const e = document.querySelector(".link");
+      e.classList.add("animate");
+      setTimeout(() => e.classList.remove("animate"), 500);
+    }, 3000);
+  }
+  animationTimer();
   return (
-    <a className="link">
+    <a className="link" href="#">
       <div className="link-div">
         <svg
           role="none"

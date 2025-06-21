@@ -6,7 +6,26 @@
   border-radius: 3px;
   cursor: pointer;
   margin-top: 1rem;
-  padding: 3px;
+  padding: 6px;
+  text-decoration: none;
+}
+.animate {
+  animation: scalePerSecond 0.5s infinite;
+}
+.link:hover {
+  background: #868e9680;
+  filter: brightness(110%);
+}
+@keyframes scalePerSecond {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .link-div {
   width: 100%;
