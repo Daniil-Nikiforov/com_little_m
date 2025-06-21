@@ -27,3 +27,92 @@
   width: 100%;
   margin-top: 1rem;
 }
+.block-img {
+  height: 594px;
+  width: 100%;
+  background-image: url("../../../public/child.png");
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+}
+.block-uslug {
+  text-align: center;
+  font-size: 17px;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+  color: #738390;
+  margin-top: 1rem;
+  line-height: 25px;
+  width: 100%;
+}
+.block-break {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.block-break span svg {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 2px;
+  color: #738390;
+  border-color: #738390;
+  fill: #738390;
+}
+.block-break span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+.block-break span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  left: 49%;
+  height: 1px;
+  opacity: 0.3;
+  transform: translate(-115%, 0);
+  background: linear-gradient(to left, #738390 0, rgba(255, 255, 255, 0) 100%);
+}
+.block-break span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  right: 26%;
+  height: 1px;
+  opacity: 0.3;
+  transform: translate(-115%, 0);
+  background: linear-gradient(to right, #738390 0, rgba(255, 255, 255, 0) 100%);
+}
+.price-list-header {
+  text-align: center;
+  font-size: 17px;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+  color: #738390;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.price-list {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hr-break {
+  display: block;
+  margin: 0 auto;
+  max-width: 132px;
+  width: 100%;
+  height: 1px;
+  background: #738390;
+  border: none;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  opacity: 0.3;
+}

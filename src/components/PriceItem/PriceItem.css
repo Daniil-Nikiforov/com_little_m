@@ -1,0 +1,23 @@
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+.subline {
+  background-image: linear-gradient(
+    to right,
+    #738390 20%,
+    rgba(0, 0, 0, 0) 20%
+  );
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 4px 1px;
+}
+span {
+  font-family: "Roboto Slab", serif;
+  color: #738390;
+  font-size: 17px;
+}

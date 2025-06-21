@@ -30,8 +30,10 @@ const Slider = ({ items }) => {
     const movedBy = currentTranslate - prevTranslate;
     if (movedBy < -100 && currentIndex < items.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
     } else if (movedBy > 100 && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
     }
 
     setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
@@ -50,27 +52,72 @@ const Slider = ({ items }) => {
   useEffect(() => {
     const sliderWidth = sliderRef.current?.offsetWidth || 0;
     setCurrentTranslate(currentIndex * -sliderWidth);
+    let allBtns = document.querySelectorAll(".slider-btn");
+    if (currentIndex == 0) {
+      allBtns[0].classList.add("active");
+      allBtns[1].classList.remove("active");
+      allBtns[2].classList.remove("active");
+      setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
+    } else if (currentIndex == 1) {
+      allBtns[1].classList.add("active");
+      allBtns[0].classList.remove("active");
+      allBtns[2].classList.remove("active");
+      setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
+    } else {
+      allBtns[2].classList.add("active");
+      allBtns[0].classList.remove("active");
+      allBtns[1].classList.remove("active");
+      setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
+    }
+    setCurrentTranslate(currentIndex * -sliderRef.current?.offsetWidth);
   }, [currentIndex]);
 
   return (
-    <div className="slider-container">
+    <div className="wrapper">
+      <div className="slider-container">
+        <div
+          ref={sliderRef}
+          className={`slider ${isDragging ? "grabbing" : ""}`}
+          style={{ transform: `translateX(${currentTranslate}px)` }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleMouseUp}
+        >
+          {items.map((item, index) => (
+            <div key={index} className="slide">
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div
-        ref={sliderRef}
-        className={`slider ${isDragging ? "grabbing" : ""}`}
-        style={{ transform: `translateX(${currentTranslate}px)` }}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleMouseUp}
+        className="btns"
+        onClick={function handleSliderBtn(e) {
+          if (e.target.tagName == "BUTTON") {
+            let allBtns = document.querySelectorAll(".slider-btn");
+            allBtns.forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            let currentSlide = e.target;
+
+            setCurrentIndex(Number(currentSlide.getAttribute("data-id")));
+
+            allBtns = null;
+            currentSlide.classList.add("active");
+
+            console.log(currentIndex);
+          }
+        }}
       >
-        {items.map((item, index) => (
-          <div key={index} className="slide">
-            {item}
-          </div>
-        ))}
+        <button data-id={0} className="slider-btn active"></button>
+        <button data-id={1} className="slider-btn"></button>
+        <button data-id={2} className="slider-btn"></button>
       </div>
     </div>
   );
