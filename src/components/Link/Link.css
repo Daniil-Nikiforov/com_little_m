@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 .animate {
-  animation: scalePerSecond 0.5s infinite;
+  animation: scalePerSecond 0.5s ease;
 }
 .link:hover {
   background: #868e9680;

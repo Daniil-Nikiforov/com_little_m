@@ -110,8 +110,6 @@ const Slider = ({ items }) => {
 
             allBtns = null;
             currentSlide.classList.add("active");
-
-            console.log(currentIndex);
           }
         }}
       >

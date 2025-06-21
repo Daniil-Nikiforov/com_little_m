@@ -9,6 +9,7 @@ import sunImg1 from "../../../public/sun.jpg";
 import sunImg2 from "../../../public/sun2.jpg";
 import sunImg3 from "../../../public/sun3.jpg";
 import PriceItem from "../../components/PriceItem/PriceItem.jsx";
+import LinkWhite from "../../components/LinkWhite/LinkWhite.jsx";
 
 const HomePage = () => {
   const slides = [
@@ -43,6 +44,190 @@ const HomePage = () => {
       }}
     ></div>,
   ];
+  const links = [
+    {
+      href: "https://wa.me/message/ORBUWQL5KSNRP1",
+      h: "ЕСТЬ ВОПРОС?",
+      p: "Задавай",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 20l1.3-3.9A9 8 0 1 1 7.7 19L3 20"></path>
+          <path d="M8 13l3-2 2 2 3-2"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://wa.me/message/ORBUWQL5KSNRP1",
+      h: "ЗАПИСАТЬСЯ",
+      p: "Задать вопрос",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+          <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://t.me/little_muslimss",
+      h: "ТЕЛЕГРАММ КАНАЛ",
+      p: "Посмотреть",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://www.youtube.com/@littlemuslims2023",
+      h: "НАШ ЮТУБ КАНАЛ",
+      p: "Посмотреть",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect
+            x="3"
+            y="5"
+            width="18"
+            height="14"
+            viewBox="0 0 18 14"
+            rx="4"
+          ></rect>
+          <path d="M10 9l5 3-5 3z"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://instagram.com/little_muslims_?igshid=MzRlODBiNWFlZA==",
+      h: "НАШ ИНСТАГРАМ",
+      p: "Посмотреть",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect
+            x="4"
+            y="4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            rx="4"
+          ></rect>
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M16.5 7.5v.001"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://vk.com/lr_zahra",
+      h: "ВК",
+      p: "Посмотреть",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M10 6h2v12c-4.5-1-8-6.5-9-12"></path>
+          <path d="M20 6c-1 2-3 5-5 6h-3m8 6c-1-2-3-5-5-6"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://preggieapp.page.link/TJnxiuqYkz8s7fze9",
+      h: "MOMLIFE",
+      p: "Прегги",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 8c2.648 0 5.028.826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59-4.03 6.5-9 6.5-4.875 0-8.845-2.8-9-6.294l-1-.206a2.5 2.5 0 0 1 2.326-4.36C5.973 8.827 8.353 8 11.001 8z"></path>
+          <path d="M12 8l1-5 6 1"></path>
+          <circle cx="19" cy="4" r="1"></circle>
+          <g fill="#000">
+            <circle cx="9" cy="13" r=".5"></circle>
+            <circle cx="15" cy="13" r=".5"></circle>
+          </g>
+          <path d="M10 17c.667.333 1.333.5 2 .5s1.333-.167 2-.5"></path>
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <>
       <Cloud />
@@ -116,6 +301,14 @@ const HomePage = () => {
         </div>
 
         <hr className="hr-break" />
+
+        <div className="Want-to-us-text">Хочешь записаться к нам? Пиши</div>
+
+        <div className="links-flex">
+          {links.map((item, index) => (
+            <LinkWhite key={index} {...item} />
+          ))}
+        </div>
       </div>
     </>
   );
