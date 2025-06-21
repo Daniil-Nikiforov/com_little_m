@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5rem;
+  width: 100%;
+}
+.dc {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(84, 87, 95);
+  font-family: "Alice", cursive;
+  font-weight: 700;
+}
+.dc-p {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  font-weight: 500;
+  color: #738390;
+}

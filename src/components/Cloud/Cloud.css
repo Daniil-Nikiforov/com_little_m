@@ -1,0 +1,6 @@
+.cloud {
+  display: block;
+  background-image: url(../../assets/cloud.png);
+  background-repeat: repeat-x;
+  height: 100px;
+}

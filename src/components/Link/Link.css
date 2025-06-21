@@ -1,0 +1,37 @@
+.link {
+  width: 100%;
+  height: 63px;
+  background: #868e9680;
+  border: 3px solid #868e96;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 3px;
+}
+.link-div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "svg text space";
+  align-items: center;
+}
+.link-div svg {
+  width: 42px;
+  height: 42px;
+  grid-area: svg;
+}
+.text-block {
+  text-align: center;
+}
+.h-text {
+  color: #163046;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.p-text {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
