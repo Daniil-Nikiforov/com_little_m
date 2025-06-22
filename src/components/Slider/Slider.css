@@ -3,30 +3,28 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  margin-top: -1.5rem;
+  margin-top: -2rem;
+  height: 795px;
 }
 .slider-container {
   width: 100%;
   overflow: hidden;
   position: relative;
   border-radius: 5px;
-  height: 800px;
+  height: 95%;
   cursor: grab;
   margin-bottom: 10px;
 }
-
 .slider {
   display: flex;
   transition: transform 0.3s ease-out;
   height: 100%;
   border-radius: 5px;
 }
-
 .slider.grabbing {
   cursor: grabbing;
   transition: none;
 }
-
 .slide {
   border-radius: 5px;
   border: 1px solid #fff;

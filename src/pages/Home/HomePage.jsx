@@ -13,8 +13,29 @@ import LinkWhite from "../../components/LinkWhite/LinkWhite.jsx";
 import Map from "../../components/Map/Map.jsx";
 import YouTube from "react-youtube";
 import ReactPlayer from "react-player";
+import YouTubePlayer from "../../components/YouTubePlayer/YouTubePlayer.jsx";
 
 const HomePage = () => {
+  const svgB = (
+    <svg
+      role="none"
+      data-mode="stroke"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="#000"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <ellipse cx="16" cy="6" rx="5" ry="3"></ellipse>
+      <path d="M11 6v4c0 1.657 2.239 3 5 3s5-1.343 5-3V6"></path>
+      <path d="M11 10v4c0 1.657 2.239 3 5 3s5-1.343 5-3v-4"></path>
+      <path d="M11 14v4c0 1.657 2.239 3 5 3s5-1.343 5-3v-4M7 9H4.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3H3m2 0v1m0-8v1"></path>
+    </svg>
+  );
   const slides = [
     <div
       style={{
@@ -241,12 +262,17 @@ const HomePage = () => {
         <div className="logo-div">
           <img src={logo} alt="logo" />
         </div>
+
         <Header />
+
         <Link />
+
         <div className="slider">
           <Slider items={slides} />
         </div>
+
         <div className="block-img"></div>
+
         <div className="block-uslug">
           Наши услуги:
           <br />
@@ -273,6 +299,7 @@ const HomePage = () => {
           ‌Праздники, аниматоры
           <br />‌<br />‌
         </div>
+
         <div className="block-break">
           <span>
             <svg
@@ -285,7 +312,9 @@ const HomePage = () => {
             </svg>
           </span>
         </div>
+
         <div className="price-list-header">ПРАЙС ЛИСТ</div>
+
         <div className="price-list">
           <PriceItem title={"Обучение Корану"} price={"300₽"} />
           <PriceItem title={"Абонемент на месяц"} price={"3000₽"} />
@@ -296,13 +325,16 @@ const HomePage = () => {
           <PriceItem title={"Домашний кинотеатр"} price={"100₽"} />
           <PriceItem title={"Мастер класс"} price={"500-800₽"} />
         </div>
+
         <hr className="hr-break" />
+
         <div className="Want-to-us-text">Хочешь записаться к нам? Пиши</div>
         <div className="links-flex">
           {links.map((item, index) => (
             <LinkWhite key={index} {...item} />
           ))}
         </div>
+
         <div className="our-place-text">
           <div className="svg-place-div">
             <svg
@@ -333,20 +365,27 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+
         <div className="map-container">
           <Map />
         </div>
+
+        <LinkWhite
+          icon={<i class="fa fai fa-map-marker-alt"></i>}
+          h="КУЗНЕЧНАЯ 45"
+          href="https://maps.google.com/?q=45.0359737,38.9822636&z=18"
+        />
+
+        <YouTubePlayer videoId="xHG3YOB8nxY" />
+
         <div className="link-white-div">
           <LinkWhite
-            icon={<i class="fa fai fa-map-marker-alt"></i>}
-            h="КУЗНЕЧНАЯ 45"
-            href="https://maps.google.com/?q=45.0359737,38.9822636&z=18"
+            svg={svgB}
+            h="БИЗНЕС"
+            p="Дополнительный заработок"
+            href="https://taplink.cc/business_woman_lr_"
           />
         </div>
-        <ReactPlayer
-          src="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-          style={{ width: "100%", height: "auto", aspectRatio: "16/9" }}
-        />
       </div>
     </>
   );

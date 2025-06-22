@@ -8,6 +8,7 @@
   margin-top: 1rem;
   padding: 6px;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 .animate {
   animation: scalePerSecond 0.5s ease;
