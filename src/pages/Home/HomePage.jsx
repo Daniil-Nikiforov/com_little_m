@@ -10,6 +10,9 @@ import sunImg2 from "../../../public/sun2.jpg";
 import sunImg3 from "../../../public/sun3.jpg";
 import PriceItem from "../../components/PriceItem/PriceItem.jsx";
 import LinkWhite from "../../components/LinkWhite/LinkWhite.jsx";
+import Map from "../../components/Map/Map.jsx";
+import YouTube from "react-youtube";
+import ReactPlayer from "react-player";
 
 const HomePage = () => {
   const slides = [
@@ -227,7 +230,9 @@ const HomePage = () => {
       ),
     },
   ];
-
+  const linkMap = {
+    icon: <i class="fa fa-map-marker" aria-hidden="true"></i>,
+  };
   return (
     <>
       <Cloud />
@@ -236,17 +241,12 @@ const HomePage = () => {
         <div className="logo-div">
           <img src={logo} alt="logo" />
         </div>
-
         <Header />
-
         <Link />
-
         <div className="slider">
           <Slider items={slides} />
         </div>
-
         <div className="block-img"></div>
-
         <div className="block-uslug">
           Наши услуги:
           <br />
@@ -273,7 +273,6 @@ const HomePage = () => {
           ‌Праздники, аниматоры
           <br />‌<br />‌
         </div>
-
         <div className="block-break">
           <span>
             <svg
@@ -286,9 +285,7 @@ const HomePage = () => {
             </svg>
           </span>
         </div>
-
         <div className="price-list-header">ПРАЙС ЛИСТ</div>
-
         <div className="price-list">
           <PriceItem title={"Обучение Корану"} price={"300₽"} />
           <PriceItem title={"Абонемент на месяц"} price={"3000₽"} />
@@ -299,16 +296,57 @@ const HomePage = () => {
           <PriceItem title={"Домашний кинотеатр"} price={"100₽"} />
           <PriceItem title={"Мастер класс"} price={"500-800₽"} />
         </div>
-
         <hr className="hr-break" />
-
         <div className="Want-to-us-text">Хочешь записаться к нам? Пиши</div>
-
         <div className="links-flex">
           {links.map((item, index) => (
             <LinkWhite key={index} {...item} />
           ))}
         </div>
+        <div className="our-place-text">
+          <div className="svg-place-div">
+            <svg
+              role="none"
+              data-mode="stroke"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M8 16l2-6 6-2-2 6-6 2"></path>
+              <circle cx="12" cy="12" r="9"></circle>
+            </svg>
+          </div>
+
+          <div className="text-place-div">
+            <div className="text-place-header">МЫ НАХОДИМСЯ</div>
+            <div className="flex-div-p">
+              <div className="text-place-p">
+                Махачкала, Турали, Кузнечная 45 (рядом с МДОУ 36)
+              </div>
+              <div className="text-place-p2">Проезд маршрута 12А</div>
+            </div>
+          </div>
+        </div>
+        <div className="map-container">
+          <Map />
+        </div>
+        <div className="link-white-div">
+          <LinkWhite
+            icon={<i class="fa fai fa-map-marker-alt"></i>}
+            h="КУЗНЕЧНАЯ 45"
+            href="https://maps.google.com/?q=45.0359737,38.9822636&z=18"
+          />
+        </div>
+        <ReactPlayer
+          src="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+          style={{ width: "100%", height: "auto", aspectRatio: "16/9" }}
+        />
       </div>
     </>
   );
