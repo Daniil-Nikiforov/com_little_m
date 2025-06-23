@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  background-color: #f1f5f5;
 }
 .logo-div {
   position: absolute;
@@ -57,7 +58,6 @@
   width: 17px;
   height: 17px;
   position: relative;
-  top: 2px;
   color: #738390;
   border-color: #738390;
   fill: #738390;
@@ -70,8 +70,8 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 10%;
-  left: 49%;
+  width: 25%;
+  left: 50%;
   height: 1px;
   opacity: 0.3;
   transform: translate(-115%, 0);
@@ -81,8 +81,8 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 10%;
-  right: 26%;
+  width: 25%;
+  right: -8%;
   height: 1px;
   opacity: 0.3;
   transform: translate(-115%, 0);

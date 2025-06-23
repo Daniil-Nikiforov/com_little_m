@@ -1,0 +1,29 @@
+.tab-flex {
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+.tab-svg {
+  font-size: 2rem;
+  height: 100%;
+}
+.tab-text-header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 25px;
+}
+.svg-tab-div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+.tab-text-collapsed {
+  margin-bottom: 1rem;
+}

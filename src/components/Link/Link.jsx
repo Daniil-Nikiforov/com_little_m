@@ -11,7 +11,7 @@ function Link() {
   }
   animationTimer();
   return (
-    <a className="link" href="#">
+    <a className="link" href="/zahra">
       <div className="link-div">
         <svg
           role="none"
