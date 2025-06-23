@@ -96,8 +96,33 @@
   gap: 25px;
 }
 .tabs-div-flex {
+  max-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.price-list-header2 {
+  margin-top: 1rem;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  font-family: "Comic Sans MS", sans-serif;
+  color: #495057;
+}
+.text-block2-soc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #495057;
+  font-family: "Comfortaa", cursive;
+  font-size: 17px;
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+.btns-flex2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }

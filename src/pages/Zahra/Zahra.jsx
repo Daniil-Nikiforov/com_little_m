@@ -8,6 +8,9 @@ import sunImg1 from "/public/sun.jpg";
 import sunImg2 from "/public/sun2.jpg";
 import sunImg3 from "/public/sun3.jpg";
 import Tab from "../../components/Tab/Tab";
+import PriceItem from "../../components/PriceItem/PriceItem";
+import PriceItem2 from "../../components/PriceItem2/PriceItem";
+import LinkWhite from "../../components/LinkWhite/LinkWhite";
 
 function Zahra() {
   const slides = [
@@ -74,6 +77,60 @@ function Zahra() {
       collapsedText:
         "Онлайн, по видеосвязи, я читаю книгу, перевожу, и объясняю тему.",
       collapse: true,
+    },
+  ];
+  const links = [
+    {
+      href: "https://instagram.com/lr_zahra_/",
+      h: "INSTAGRAM",
+      svg: <i class="fa-brands fa-instagram"></i>,
+      bg: "#F00075",
+      c: "#fff",
+    },
+    {
+      href: "https://wa.me/message/ORBUWQL5KSNRP1",
+      h: "ЗАПИСАТЬСЯ",
+      p: "Задать вопрос",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+          <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
+        </svg>
+      ),
+    },
+    {
+      href: "https://t.me/little_muslimss",
+      h: "ТЕЛЕГРАММ КАНАЛ",
+      p: "Посмотреть",
+      svg: (
+        <svg
+          role="none"
+          data-mode="stroke"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"></path>
+        </svg>
+      ),
     },
   ];
   return (
@@ -239,9 +296,30 @@ function Zahra() {
         </div>
 
         <Slider items={slides} />
+
         <div className="tabs-div-flex">
           {tabs.map((item) => (
             <Tab props={item} />
+          ))}
+        </div>
+
+        <div className="price-list-header2">
+          Прайс <br />
+          ‌Индивидуальные занятия
+        </div>
+
+        <div className="price-list">
+          <PriceItem2 title={"Тасриф"} price={"1 000.00₽"} />
+          <PriceItem2 title={"Фикх"} price={"1 000.00₽"} />
+          <PriceItem2 title={"Арабский"} price={"1 000.00₽"} />
+          <PriceItem2 title={"Грамматика (нахв)"} price={"1 000.00₽"} />
+          <PriceItem2 title={"Коран"} price={"800₽"} />
+        </div>
+
+        <div className="text-block2-soc">Соцсети</div>
+        <div className="btns-flex2">
+          {links.map((item, index) => (
+            <LinkWhite key={index} {...item} />
           ))}
         </div>
       </div>

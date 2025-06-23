@@ -12,6 +12,10 @@ function LinkWhite(props) {
   animationTimer();
   return (
     <a
+      style={{
+        background: `${props.bg}`,
+        color: `${props.c}`,
+      }}
       target="_blank"
       href={props.href}
       className={props.h === "ЗАПИСАТЬСЯ" ? "jump-btn" : null}

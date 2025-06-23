@@ -34,8 +34,24 @@ a:hover {
 }
 .svg-div {
   grid-area: svg;
+  width: 42px;
+  height: 42px;
 }
 .svg-div svg {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-size: 42px;
+}
+.svg-div i::before {
+  display: block;
+  width: 42px;
+  height: 42px;
+  font-size: 42px;
+  text-align: center;
+}
+.svg-div i {
+  display: block;
   width: 42px;
   height: 42px;
   text-align: center;
