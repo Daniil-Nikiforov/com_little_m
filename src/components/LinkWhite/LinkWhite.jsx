@@ -23,7 +23,19 @@ function LinkWhite(props) {
       <div className="flex-div">
         <div className="svg-div">{props.svg}</div>
         <div className="middle-text">
-          <div className="h-text">
+          <div
+            className="h-text"
+            style={
+              props.font
+                ? {
+                    color: `${props.c}`,
+                    fontFamily: `${props.font}`,
+                  }
+                : {
+                    color: `${props.c}`,
+                  }
+            }
+          >
             {props.icon && (
               <div className="icon-div">
                 {props.icon} {props.h}
