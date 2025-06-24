@@ -135,7 +135,7 @@ function Zahra() {
       font: "'Roboto Slab',serif",
     },
     {
-      href: "https://taplink.cc/business_woman_lr_",
+      href: "/business_woman",
       h: "МОЙ БИЗНЕС",
       p: "Научу зарабатывать",
       svg: (

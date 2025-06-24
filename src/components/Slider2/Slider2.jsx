@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, createElement } from "react";
-import "./Slider.css";
+import "./Slider2.css";
 
-const Slider = ({ items, text, text2 }) => {
+const Slider2 = ({ items, text, text2 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState(0);
@@ -43,7 +43,6 @@ const Slider = ({ items, text, text2 }) => {
     setCurrentTranslate(currentIndex * -sliderRef.current.offsetWidth);
   };
 
-  // Обработчики событий для тач-устройств
   const handleTouchStart = (e) => {
     handleMouseDown(e.touches[0]);
   };
@@ -52,14 +51,13 @@ const Slider = ({ items, text, text2 }) => {
     handleMouseMove(e.touches[0]);
   };
 
-  // Эффект для установки позиции слайдера
   useEffect(() => {
     const sliderWidth = sliderRef.current?.offsetWidth || 0;
     setCurrentTranslate(currentIndex * -sliderWidth);
 
-    let allBtns = document.querySelectorAll(".slider-btn");
+    let allBtns = document.querySelectorAll(".slider-btn2");
     allBtns.forEach((item) => {
-      item.className = "slider-btn";
+      item.className = "slider-btn2";
     });
     allBtns[currentIndex].classList.add("active");
 
@@ -67,11 +65,11 @@ const Slider = ({ items, text, text2 }) => {
   }, [currentIndex]);
 
   function createBtns(len) {
-    let btns = document.querySelector(".btns");
+    let btns = document.querySelector(".btns2");
 
     for (let index = 0; index < len; index++) {
       let element = document.createElement("button");
-      element.className = "slider-btn";
+      element.className = "slider-btn2";
       element.setAttribute("data-id", index);
       if (index == 0) {
         element.classList.add("active");
@@ -81,11 +79,11 @@ const Slider = ({ items, text, text2 }) => {
   }
 
   return (
-    <div className="wrapper">
-      <div className="slider-container">
+    <div className="wrapper2">
+      <div className="slider-container2">
         <div
           ref={sliderRef}
-          className={`slider ${isDragging ? "grabbing" : ""}`}
+          className={`slider2 ${isDragging ? "grabbing2" : ""}`}
           style={{ transform: `translateX(${currentTranslate}px)` }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -96,10 +94,10 @@ const Slider = ({ items, text, text2 }) => {
           onTouchEnd={handleMouseUp}
         >
           {items.map((item, index) => (
-            <div key={index} className={`${text ? "slide" : "slide2"}`}>
+            <div key={index} className={`slide2`}>
               {item}
               {text && (
-                <div className="slider-text-block-flex">
+                <div className="slider-text-block-flex2">
                   <div className="slider-text-block">{text[index]}</div>
                   <div className="slider-text-block2">{text2[index]}</div>
                 </div>
@@ -110,7 +108,7 @@ const Slider = ({ items, text, text2 }) => {
       </div>
 
       <div
-        className="btns"
+        className="btns2"
         onClick={function handleSliderBtn(e) {
           if (e.target.tagName == "BUTTON") {
             let allBtns = document.querySelectorAll(".slider-btn");
@@ -131,4 +129,4 @@ const Slider = ({ items, text, text2 }) => {
   );
 };
 
-export default Slider;
+export default Slider2;

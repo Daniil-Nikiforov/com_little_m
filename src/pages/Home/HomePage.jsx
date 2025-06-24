@@ -376,14 +376,14 @@ const HomePage = () => {
           href="https://maps.google.com/?q=45.0359737,38.9822636&z=18"
         />
 
-        <YouTubePlayer videoId="xHG3YOB8nxY" />
+        <YouTubePlayer videoId="g8hsdMxS7mY" />
 
         <div className="link-white-div">
           <LinkWhite
             svg={svgB}
             h="БИЗНЕС"
             p="Дополнительный заработок"
-            href="https://taplink.cc/business_woman_lr_"
+            href="/business_woman"
           />
         </div>
       </div>

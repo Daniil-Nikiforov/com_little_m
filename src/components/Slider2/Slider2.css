@@ -1,4 +1,4 @@
-.wrapper {
+.wrapper2 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   margin-top: -2rem;
   height: 795px;
 }
-.slider-container {
+.slider-container2 {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -15,7 +15,7 @@
   cursor: grab;
   margin-bottom: 10px;
 }
-.slider {
+.slider2 {
   display: flex;
   transition: transform 0.3s ease-out;
   height: 100%;
@@ -27,23 +27,9 @@
   height: 100%;
   border-radius: 5px;
 }
-.slider.grabbing {
+.slider2.grabbing2 {
   cursor: grabbing;
   transition: none;
-}
-.slide {
-  border-radius: 5px;
-  border: 1px solid #fff;
-  /* background-image: url("../../assets/sun.jpg"); */
-  background-position: center;
-  background-size: cover;
-  overflow: visible;
-  min-width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto 82px;
-  align-items: center;
-  user-select: none;
 }
 .slide2 {
   border-radius: 5px;
@@ -57,13 +43,13 @@
   display: flex;
   user-select: none;
 }
-.btns {
+.btns2 {
   display: flex;
   gap: 5px;
   justify-content: center;
   margin: 5px;
 }
-.slider-btn {
+.slider-btn2 {
   width: 10px;
   height: 10px;
   cursor: pointer;
@@ -76,7 +62,7 @@
 .active {
   opacity: 1;
 }
-.slider-text-block-flex {
+.slider-text-block-flex2 {
   height: 82px;
   padding: 14px;
   background: #fff;
